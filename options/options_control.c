@@ -27,7 +27,7 @@ void	options_control(char **av)
 		j = 1;
 		while (av[i][j])
 		{
-			res |= (1 << (av[i][j] - 97));
+			res |= (1U << (av[i][j] - 97));
 			j++;
 		}
 		i++;
