@@ -2,12 +2,12 @@
 
 void	print_bits(unsigned int nb)
 {
-	int i = 31;
+	int i = (sizeof(nb) * 8) - 1;
 	int j = 0;	
 
 	while (i >= 0)
 	{
-		nb & (1 << i) ? write(1, "1", 1) : write(1, "0", 1);
+		nb & (1U << i) ? write(1, "1", 1) : write(1, "0", 1);
 		i--;
 		j++;
 		if (j % 8 == 0)
